@@ -32,12 +32,12 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Refs for scroll sections
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const experienceRef = useRef<HTMLDivElement>(null)
-  const educationRef = useRef<HTMLDivElement>(null)
-  const projectsRef = useRef<HTMLDivElement>(null)
-  const contactRef = useRef<HTMLDivElement>(null)
-  const skillsRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement | any>(null)
+  const experienceRef = useRef<HTMLDivElement | any>(null)
+  const educationRef = useRef<HTMLDivElement | any>(null)
+  const projectsRef = useRef<HTMLDivElement | any>(null)
+  const contactRef = useRef<HTMLDivElement | any>(null)
+  const skillsRef = useRef<HTMLDivElement | any>(null)
 
   // Scroll to section function
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {

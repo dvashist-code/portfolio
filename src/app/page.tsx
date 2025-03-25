@@ -2,12 +2,11 @@
 
 import type React from "react"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, RefObject } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import {
   GraduationCap,
   Award,
-  Code,
   Mail,
   Phone,
   MapPin,
@@ -32,12 +31,12 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   // Refs for scroll sections
-  const aboutRef = useRef<HTMLDivElement | any>(null)
-  const experienceRef = useRef<HTMLDivElement | any>(null)
-  const educationRef = useRef<HTMLDivElement | any>(null)
-  const projectsRef = useRef<HTMLDivElement | any>(null)
-  const contactRef = useRef<HTMLDivElement | any>(null)
-  const skillsRef = useRef<HTMLDivElement | any>(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const experienceRef = useRef<HTMLDivElement>(null) 
+  const educationRef = useRef<HTMLDivElement>(null)
+  const projectsRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+  const skillsRef = useRef<HTMLDivElement>(null)
 
   // Scroll to section function
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
@@ -68,37 +67,37 @@ export default function Home() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <button
-                onClick={() => scrollToSection(aboutRef)}
+                onClick={() => scrollToSection(aboutRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 About
               </button>
               <button
-                onClick={() => scrollToSection(skillsRef)}
+                onClick={() => scrollToSection(skillsRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 Skills
               </button>
               <button
-                onClick={() => scrollToSection(experienceRef)}
+                onClick={() => scrollToSection(experienceRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 Experience
               </button>
               <button
-                onClick={() => scrollToSection(educationRef)}
+                onClick={() => scrollToSection(educationRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 Education
               </button>
               <button
-                onClick={() => scrollToSection(projectsRef)}
+                onClick={() => scrollToSection(projectsRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 Projects
               </button>
               <button
-                onClick={() => scrollToSection(contactRef)}
+                onClick={() => scrollToSection(contactRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors"
               >
                 Contact
@@ -142,37 +141,37 @@ export default function Home() {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               <button
-                onClick={() => scrollToSection(aboutRef)}
+                onClick={() => scrollToSection(aboutRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 About
               </button>
               <button
-                onClick={() => scrollToSection(skillsRef)}
+                onClick={() => scrollToSection(skillsRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 Skills
               </button>
               <button
-                onClick={() => scrollToSection(experienceRef)}
+                onClick={() => scrollToSection(experienceRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 Experience
               </button>
               <button
-                onClick={() => scrollToSection(educationRef)}
+                onClick={() => scrollToSection(educationRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 Education
               </button>
               <button
-                onClick={() => scrollToSection(projectsRef)}
+                onClick={() => scrollToSection(projectsRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 Projects
               </button>
               <button
-                onClick={() => scrollToSection(contactRef)}
+                onClick={() => scrollToSection(contactRef as RefObject<HTMLDivElement>)}
                 className="text-sm font-medium cursor-pointer hover:text-primary transition-colors py-2"
               >
                 Contact
@@ -206,10 +205,10 @@ export default function Home() {
                 complex problems and delivering innovative solutions.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button onClick={() => scrollToSection(contactRef)} size="lg">
+                <Button onClick={() => scrollToSection(contactRef as RefObject<HTMLDivElement>)} size="lg">
                   Contact Me
                 </Button>
-                <Button onClick={() => scrollToSection(projectsRef)} variant="outline" size="lg">
+                <Button onClick={() => scrollToSection(projectsRef as RefObject<HTMLDivElement>)} variant="outline" size="lg">
                   View Projects
                 </Button>
               </div>
@@ -221,7 +220,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20"
             >
-                <img src="profile.jpg" alt="profile" className="w-full h-full cover" />
+                <Image src="profile.jpg" alt="profile" className="w-full h-full cover" />
             </motion.div>
           </div>
 
@@ -285,7 +284,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="rounded-xl overflow-hidden h-[400px] flex align-center justify-center"
             >
-              <img src="profile.jpg" alt="profile" className="h-[400px] rounded-xl" />
+              <Image src="profile.jpg" alt="profile" className="h-[400px] rounded-xl" />
             </motion.div>
             
             <motion.div
@@ -296,7 +295,7 @@ export default function Home() {
               className="space-y-4"
             >
               <p className="text-lg text-muted-foreground">
-                Hi, I'm Deepanshu Vashist, a detail-oriented Data Analyst with a passion for turning complex data into actionable insights. With expertise in data visualization, statistical analysis, and business intelligence, I help organizations make informed decisions that drive efficiency and growth.
+                Hi, I&apos;m Deepanshu Vashist, a detail-oriented Data Analyst with a passion for turning complex data into actionable insights. With expertise in data visualization, statistical analysis, and business intelligence, I help organizations make informed decisions that drive efficiency and growth.
               </p>
               <p className="text-lg text-muted-foreground">
               My skills include Excel, and Power BI, allowing me to clean, analyze, and present data effectively. I specialize in identifying trends, optimizing processes, and providing data-driven solutions to business challenges.
@@ -548,7 +547,7 @@ export default function Home() {
             <Card className="overflow-hidden">
               <div className="h-60 bg-gradient-to-r from-primary/20 to-primary/10">
                 {/* <Code className="h-16 w-16 text-primary/60" /> */}
-                <img src="/aqi.jpg" alt="aqi" className="w-full h-full" />
+                <Image src="/aqi.jpg" alt="aqi" className="w-full h-full" />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-4">AQI (AIR QUALITY INDEX)</h3>

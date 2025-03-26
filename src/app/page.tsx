@@ -13,7 +13,6 @@ import {
   ChevronRight,
   Github,
   Linkedin,
-  ExternalLink,
   Sun,
   Moon,
   Menu,

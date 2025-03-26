@@ -182,13 +182,13 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative flex items-center justify-center overflow-hidden py-16">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-background/0"></div>
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
         </motion.div>
 
-        <div className="container mx-auto px-4 z-10 max-w-screen-xl">
+        <div className="container mt-4 mx-auto px-4 z-10 max-w-screen-xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -199,9 +199,9 @@ export default function Home() {
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
                 <span className="text-primary">DEEPANSHU</span> VASHIST
               </h1>
-              <h2 className="text-2xl md:text-3xl text-muted-foreground mb-6">Data Analyst | Network Engineer</h2>
+              <h2 className="text-2xl md:text-3xl text-muted-foreground mt-12 mb-6">Data Analyst </h2>
               <p className="text-lg mb-8 max-w-lg">
-                A passionate professional with expertise in data analysis and network engineering, dedicated to solving
+                A passionate professional with expertise in data analysis, dedicated to solving
                 complex problems and delivering innovative solutions.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -220,7 +220,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20"
             >
-                <Image src="profile.jpg" alt="profile" className="w-full h-full cover" />
+                <Image src="/profile.jpg" alt="profile" className="w-full h-full cover" width={256} height={256} />
             </motion.div>
           </div>
 
@@ -236,7 +236,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary" />
-              <span>+919193030878</span>
+              <span>+919319303078</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary" />
@@ -249,7 +249,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="hidden xl:block absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -263,7 +263,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} className="py-24 bg-muted/30">
+      <section ref={aboutRef} className="py-12 bg-muted/30">
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -284,7 +284,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               className="rounded-xl overflow-hidden h-[400px] flex align-center justify-center"
             >
-              <Image src="profile.jpg" alt="profile" className="h-[400px] rounded-xl" />
+              <Image src="/profile.jpg" alt="profile" className="h-[400px] rounded-xl" height={380}  width={400} />
             </motion.div>
             
             <motion.div
@@ -309,7 +309,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section ref={skillsRef} className="py-24">
+      <section ref={skillsRef} className="py-12">
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -400,7 +400,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section ref={experienceRef} className="py-24">
+      <section ref={experienceRef} className="py-12">
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -449,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section ref={educationRef} className="py-24 bg-muted/30">
+      <section ref={educationRef} className="py-12 bg-muted/30">
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -474,7 +474,7 @@ export default function Home() {
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                     <GraduationCap className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold">BCA (MIU)</h3>
+                  <h3 className="text-xl font-semibold">BCA (AI & ML)</h3>
                   <p className="text-primary mt-1">SGT University</p>
                   <p className="text-muted-foreground">Gurugram, India</p>
                   <p className="text-sm mt-4">In Progress [2022-2025]</p>
@@ -524,7 +524,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section ref={projectsRef} className="py-24"> 
+      <section ref={projectsRef} className="py-12"> 
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -547,7 +547,7 @@ export default function Home() {
             <Card className="overflow-hidden">
               <div className="h-60 bg-gradient-to-r from-primary/20 to-primary/10">
                 {/* <Code className="h-16 w-16 text-primary/60" /> */}
-                <Image src="/aqi.jpg" alt="aqi" className="w-full h-full" />
+                <Image src="/aqi.jpg" alt="aqi" className="w-full h-[90%] md:h-full" height={240} width={780} />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-2xl font-semibold mb-4">AQI (AIR QUALITY INDEX)</h3>
@@ -556,8 +556,8 @@ export default function Home() {
                   the aqi of a particular place by giving some of its features like wind, temperature, Smog, Pollution
                   etc.
                 </p>
-                <p className="text-sm text-muted-foreground mb-6">At CODE SANGAM &apos;24, SGT University.</p>
-                <div className="flex gap-4">
+                <p className="text-sm text-muted-foreground ">At CODE SANGAM &apos;24, SGT University.</p>
+                {/* <div className="flex gap-4">
                   <Button variant="default" className="gap-2">
                     <ExternalLink className="h-4 w-4" />
                     View Project
@@ -566,7 +566,7 @@ export default function Home() {
                     <Github className="h-4 w-4" />
                     Source Code
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </motion.div>
@@ -574,7 +574,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section ref={contactRef} className="py-24 bg-muted/30">
+      <section ref={contactRef} className="py-12 bg-muted/30">
         <div className="container mx-auto px-4 max-w-screen-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -613,7 +613,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-muted-foreground">+919193030878</p>
+                      <p className="text-muted-foreground">+919319303078</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -666,7 +666,7 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">
               &copy; {new Date().getFullYear()} Deepanshu Vashist. All rights reserved.
             </p>
-            <p className="text-sm text-muted-foreground">Data Analyst | Network Engineer</p>
+            <p className="text-sm text-muted-foreground">Data Analyst </p>
           </div>
         </div>
       </footer>
